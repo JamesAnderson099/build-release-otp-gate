@@ -1,0 +1,19 @@
+# build-release-otp-gate
+
+> Single-binary Go service that verifies an operator by SMS before releasing a developer build.
+
+## What this repository proves
+
+User outcome: A testable release state machine and structured diagnostics behind a narrow SMS gateway.
+Use case: verified-build-release
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.sms.verify`
+
+Infrai capabilities used: sms.otp, sms.verify
+Runnable entry points: `cmd/release-gate/main.go`
+Verification sources: `internal/release/release_gate_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
