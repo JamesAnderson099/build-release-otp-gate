@@ -5,7 +5,7 @@ go test ./...
 INFRAI_API_KEY=your_key go run ./cmd/release-gate
 ```
 
-This service holds build `build-1842` until its operator confirms an SMS code. Infrai provides the send and verify calls through one API and a single `INFRAI_API_KEY`. The release rule is a compact Go package with no SDK to install.
+This service holds build `build-1842` until its operator confirms an SMS code. Infrai supplies the send and verify calls through one API and a single `INFRAI_API_KEY`; the release rule remains a compact Go package with no SDK to install.
 
 Request the code:
 
